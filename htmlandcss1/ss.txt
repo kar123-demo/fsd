@@ -1,0 +1,380 @@
+# Society Survey and Representative Election Management System (HTML Only)
+
+## index.html
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Society Survey and Election System</title>
+</head>
+<body>
+    <header>
+        <h1>Society Survey and Representative Election System</h1>
+        <img src="logo.png" alt="Society Logo" width="100">
+
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="register.html">Register</a> |
+            <a href="login.html">Login</a> |
+            <a href="polls.html">View Polls</a> |
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Welcome Residents</h2>
+        <p>This system helps residents participate in surveys and elect society representatives.</p>
+
+        <h3>Election Announcement</h3>
+        <p>Society representative elections will be conducted next month.</p>
+
+        <button>Register</button>
+        <button>Login</button>
+        <button>View Polls</button>
+    </main>
+</body>
+</html>
+```
+
+---
+
+## register.html
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+</head>
+<body>
+    <h1>User Registration</h1>
+
+    <form>
+        <label>Full Name:</label><br>
+        <input type="text"><br><br>
+
+        <label>Flat / House Number:</label><br>
+        <input type="text"><br><br>
+
+        <label>Email:</label><br>
+        <input type="email"><br><br>
+
+        <label>Mobile Number:</label><br>
+        <input type="tel"><br><br>
+
+        <label>Password:</label><br>
+        <input type="password"><br><br>
+
+        <label>Confirm Password:</label><br>
+        <input type="password"><br><br>
+
+        <label>Resident Type:</label><br>
+        <input type="radio" name="resident"> Owner
+        <input type="radio" name="resident"> Tenant<br><br>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
+```
+
+---
+
+## login.html
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h1>Resident Login</h1>
+
+    <form>
+        <label>Email or Mobile Number:</label><br>
+        <input type="text"><br><br>
+
+        <label>Password:</label><br>
+        <input type="password"><br><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <a href="#">Forgot Password?</a><br>
+    <a href="register.html">Register</a>
+</body>
+</html>
+```
+
+---
+
+## dashboard.html
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Resident Dashboard</h1>
+
+    <h2>Welcome Resident</h2>
+
+    <ul>
+        <li>Active Surveys</li>
+        <li>Active Polls</li>
+        <li>Candidates</li>
+        <li>Results</li>
+    </ul>
+
+    <h3>Recent Announcements</h3>
+    <p>Election nominations are open.</p>
+
+    <h3>Election Timeline</h3>
+    <table border="1">
+        <tr>
+            <th>Event</th>
+            <th>Date</th>
+        </tr>
+        <tr>
+            <td>Nomination Start</td>
+            <td>10 June</td>
+        </tr>
+        <tr>
+            <td>Voting Date</td>
+            <td>20 June</td>
+        </tr>
+    </table>
+</body>
+</html>
+```
+
+---
+
+## survey.html
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Society Survey</title>
+</head>
+<body>
+    <h1>Society Survey</h1>
+
+    <form>
+        <label>Cleanliness Satisfaction:</label><br>
+        <select>
+            <option>Excellent</option>
+            <option>Good</option>
+            <option>Average</option>
+            <option>Poor</option>
+        </select><br><br>
+
+        <label>Security Service Feedback:</label><br>
+        <textarea></textarea><br><br>
+
+        <label>Parking Issues:</label><br>
+        <input type="checkbox"> Lack of Space
+        <input type="checkbox"> Unauthorized Parking<br><br>
+
+        <label>Water Supply Feedback:</label><br>
+        <textarea></textarea><br><br>
+
+        <label>Maintenance Quality:</label><br>
+        <input type="radio" name="maintenance"> Good
+        <input type="radio" name="maintenance"> Average
+        <input type="radio" name="maintenance"> Poor<br><br>
+
+        <label>Suggestions:</label><br>
+        <textarea></textarea><br><br>
+
+        <button type="submit">Submit Survey</button>
+    </form>
+</body>
+</html>
+```
+
+---
+
+## polls.html
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Polls</title>
+</head>
+<body>
+    <h1>Active Polls</h1>
+
+    <table border="1">
+        <tr>
+            <th>Poll Title</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <td>President Election</td>
+            <td>Election for Society President</td>
+            <td>Active</td>
+            <td><button>Vote Now</button></td>
+        </tr>
+
+        <tr>
+            <td>Secretary Election</td>
+            <td>Election for Society Secretary</td>
+            <td>Active</td>
+            <td><button>Vote Now</button></td>
+        </tr>
+    </table>
+</body>
+</html>
+```
+
+---
+
+## vote.html
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voting Page</title>
+</head>
+<body>
+    <h1>Vote for President</h1>
+
+    <form>
+        <h3>Candidate 1</h3>
+        <p>Name: Ravi Kumar</p>
+        <p>Flat No: A-101</p>
+        <p>Manifesto: Better maintenance and security.</p>
+        <input type="radio" name="candidate"> Select<br><br>
+
+        <h3>Candidate 2</h3>
+        <p>Name: Suresh Reddy</p>
+        <p>Flat No: B-202</p>
+        <p>Manifesto: Improved parking facilities.</p>
+        <input type="radio" name="candidate"> Select<br><br>
+
+        <button type="submit">Submit Vote</button>
+    </form>
+</body>
+</html>
+```
+
+---
+
+## candidates.html
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Candidates</title>
+</head>
+<body>
+    <h1>Candidate List</h1>
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Experience</th>
+            <th>Manifesto</th>
+            <th>Contact</th>
+        </tr>
+
+        <tr>
+            <td>Ravi Kumar</td>
+            <td>President</td>
+            <td>5 Years</td>
+            <td>Improve maintenance</td>
+            <td>9876543210</td>
+        </tr>
+    </table>
+</body>
+</html>
+```
+
+---
+
+## results.html
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+</head>
+<body>
+    <h1>Election Results</h1>
+
+    <table border="1">
+        <tr>
+            <th>Candidate</th>
+            <th>Votes</th>
+            <th>Percentage</th>
+        </tr>
+
+        <tr>
+            <td>Ravi Kumar</td>
+            <td>120</td>
+            <td>60%</td>
+        </tr>
+
+        <tr>
+            <td>Suresh Reddy</td>
+            <td>80</td>
+            <td>40%</td>
+        </tr>
+    </table>
+
+    <h2>Winner: Ravi Kumar</h2>
+</body>
+</html>
+```
+
+---
+
+## contact.html
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+</head>
+<body>
+    <h1>Contact Society Committee</h1>
+
+    <form>
+        <label>Name:</label><br>
+        <input type="text"><br><br>
+
+        <label>Email:</label><br>
+        <input type="email"><br><br>
+
+        <label>Subject:</label><br>
+        <input type="text"><br><br>
+
+        <label>Message:</label><br>
+        <textarea></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>Society Office Details</h3>
+    <p>Address: Green Valley Apartments</p>
+    <p>Email: societyoffice@gmail.com</p>
+    <p>Phone: 9876543210</p>
+    <p>Office Timings: 9 AM - 6 PM</p>
+</body>
+</html>
+```
