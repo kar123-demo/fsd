@@ -1,0 +1,151 @@
+/* .main{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+background-color: rgb(40, 139, 82);
+height:260px
+}
+.b1{
+    background-color: aqua;
+    padding: 25px;
+    margin:10px;
+    width:90px;
+    text-align: center;
+
+}
+.gmain{
+    background-color: blue;
+    display: grid;
+grid-template-columns: 1fr 1fr;
+
+} */
+/* .anm{
+    background-color: brown;
+    width:55px;
+    padding: 25px;
+    animation: trans 10s;
+
+position: relative;
+    
+}
+@keyframes trans {
+    0%{
+    left: 0;
+    top:0;
+    }
+    25%{
+left: 150px;
+top: 150px;
+background-color: blue;
+    }
+    50%{
+        left: 300px;
+top: 300px;
+background-color: coral;
+    }
+   75%{
+    left: 150px;
+top: 150px;
+background-color: blue;
+   }
+   100%{
+       left: 0;
+    top:0;
+   }
+} */
+ /* #b1{
+    width:100px;
+    height:100px;
+    background-color: rgb(231, 17, 17);
+    transition: width 2s,height 4s;
+ }
+ #b1:hover{
+    width: 200px;
+    height:200px;
+ } */
+  /* #b2{
+    width: 100px;
+    height:200px;
+    background-color: blue;
+    transition: transform 4s;
+    transform:rotate(90deg);
+animation: move 4s ease-in-out 4s ;
+position: relative;
+  }
+  @keyframes move {
+    0%{
+left:0;
+    }
+    100%{
+        left:200px;
+    }
+  } */
+   #b2{
+    width: 100px;
+    height:100px;
+    background-color:brown;
+    animation:change 4s;
+    animation-direction: alternate;
+    position: relative;
+    left:100px;
+    
+   }
+   #b1{
+background-color: brown;
+animation: movein 4s;
+animation-delay: 4s;
+width: 50px;
+    height:50px;
+    position: relative;
+    left:100px;
+     top:150px;
+   }body{
+    background-color: brown;
+}
+@media screen and (max-width:700px){
+
+#b2{
+ background-color:brown;
+  
+    transition: transform 4s;
+    transform:scale(0.5) rotate(180deg)
+
+}
+#b1{
+    background-color: brown;
+    transition: transform 4s;
+    transition-delay: 4s;
+    transform:scale(2) rotate(-180deg)
+
+}
+@keyframes change {
+   from{
+    background-color: blue;
+    left:100px;
+    top: 0;
+   }
+    to{
+         background-color: brown;
+     left:100px;
+     top:150px;
+     
+    
+   } 
+ 
+}
+
+@keyframes movein {
+   from{
+  background-color: brown;
+    left:100px;
+    top: 150px;
+   }
+    to{
+     background-color: blue;
+     left:0px;
+     top:150px;
+   } 
+}
+}
