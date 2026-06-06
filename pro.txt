@@ -1,17 +1,3 @@
-static int max=Integer.MIN_VALUE;
-static int dfs(TreeNode r){
-if(r==null){
-    return 0;
-}
-int l=dfs(r.left);
-int r1=dfs(r.right);
-max=Math.max(max,l+r1+r.val);
-return Math.max(l,r)+r.val;
-}
-static boolean dfs(TreeNode r,TreeNode l){
-    if(l==null && r==null){
-        return true;
-    }
-    if(l==null || r==null) return false;
-    return dfs(r.left,l.left)||dfs(r.right,l.right);
+{
+    TreeNode 
 }
