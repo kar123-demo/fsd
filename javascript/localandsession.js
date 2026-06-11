@@ -81,16 +81,82 @@
 // function myDisplayer(some) {
 //   document.getElementById("demo").innerHTML = some;
 // }
-let myPromise = new Promise((resolve, reject)=> {
-  ok = false;
 
-  if (ok) {
-    resolve("OK");
-  } else {
-    reject("Error");
-  }
-});
-console.log(myPromise)
-myPromise.then((data)=>{console.log(data)}
+// let myPromise = new Promise((resolve, reject)=> {
+//   ok = false;
+
+//   if (ok) {
+//     resolve("OK");
+//   } else {
+//     reject("Error");
+//   }
+// });
+// console.log(myPromise)
+// myPromise.then((data)=>{console.log(data)}
   
-).catch((err)=>console.log(err))
+// ).catch((err)=>console.log(err))
+
+// async function cart(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//         console.log("add to cart completed")
+//         resolve()
+//     },2000)
+
+//     })
+    
+// }
+// async function payment(){
+//     return new Promise((resolve,reject)=>{
+//       setTimeout(()=>{
+//        console.log("Payment completed") 
+//         resolve()
+//     },3000)
+   
+//     })
+    
+    
+// }
+// async function order(){
+//         return new Promise((resolve,reject)=>{
+//        setTimeout(()=>{
+//         console.log("order placed")
+//            resolve()
+//     },5000)
+    
+//     })
+    
+// }
+// async function delivery(){
+//         return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//     console.log("delivery is done in few movements")
+//        resolve()
+//     },1000)
+//     })
+  
+// }
+// async function main(){
+//   await  cart()
+//   console.log(cart())
+//   await  payment()
+//    console.log(payment())
+//    await order()
+//    console.log(order())
+//    await delivery()
+//    console.log(delivery())
+// }
+// main()
+async function fetchdata(){
+let f= await(await fetch("https://jsonplaceholder.typicode.com/users")).json()
+let text=""
+for(let i of f){
+    text+=`<h3>`
+    text+=`Name:${i.name}-Username:${i.username}`
+    text+=`</h3>`
+
+}
+document.getElementById("demo").innerHTML=text
+}
+fetchdata();
+
