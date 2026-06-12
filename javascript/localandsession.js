@@ -147,16 +147,38 @@
 //    console.log(delivery())
 // }
 // main()
-async function fetchdata(){
-let f= await(await fetch("https://jsonplaceholder.typicode.com/users")).json()
-let text=""
-for(let i of f){
-    text+=`<h3>`
-    text+=`Name:${i.name}-Username:${i.username}`
-    text+=`</h3>`
+// async function fetchdata(){
+// let f= await(await fetch("https://jsonplaceholder.typicode.com/users")).json()
+// let text=""
+// for(let i of f){
+//     text+=`<h3>`
+//     text+=`Name:${i.name}-Username:${i.username}`
+//     text+=`</h3>`
 
+// }
+// document.getElementById("demo").innerHTML=text
+// }
+// fetchdata();
+
+let text = "";
+
+async function apifetch() {
+    const response = await fetch(
+        "https://api.open-meteo.com/v1/forecast?latitude=17.3850&longitude=78.4867&current=temperature_2m"
+    );
+
+    const data = await response.json();
+
+    text += "<h2>";
+    text += `Latitude: ${data.latitude}<br>`;
+    text += `Longitude: ${data.longitude}<br>`;
+    text += `Temperature: ${data.current.temperature_2m}°C`;
+    text += "</h2>";
+
+    document.getElementById("demo").innerHTML = text;
+
+    console.log(data);
 }
-document.getElementById("demo").innerHTML=text
-}
-fetchdata();
+
+
 
